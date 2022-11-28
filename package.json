@@ -1,0 +1,63 @@
+{
+  "name": "pjblog-theme-demo",
+  "version": "1.0.0",
+  "description": "pjblog-theme-demo:description",
+  "main": "index.js",
+  "repository": "https://github.com/pjblog/pjblog-template-theme",
+  "homepage": "https://npmjs.com/pjblog-theme-demo",
+  "files": [
+    "dist/ssr",
+    "index.js",
+    "theme.configs.json"
+  ],
+  "scripts": {
+    "dev": "npm run dev:ssr",
+    "dev:ssr": "SSR=true vite --host",
+    "build": "rm -rf dist && npm run build:ssr",
+    "build:client": "KIND=client vite build",
+    "build:server": "KIND=server vite build",
+    "build:ssr": "npm run build:client && npm run build:server"
+  },
+  "dependencies": {
+    "@codixjs/codix": "^1.0.14",
+    "@codixjs/fetch": "^1.0.0",
+    "@codixjs/server": "^1.0.0",
+    "@pjblog/hooks": "^1.0.19",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@typeservice/exception": "^1.0.1",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-proposal-decorators": "^7.18.6",
+    "@codixjs/vite": "^1.0.1",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "less": "^4.1.3",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.8"
+  },
+  "config": {
+    "entries": {
+      "spa": "./src/entries/spa.tsx",
+      "client": "./src/entries/client.tsx",
+      "server": "./src/entries/server.tsx"
+    },
+    "skips": [
+      "/demo//@react-refresh",
+      "/demo/@id/vite/modulepreload-polyfill",
+      "/demo/@vite/client"
+    ],
+    "rewrites": {
+      "/index.html": "/"
+    }
+  },
+  "manifest": {},
+  "pjblog": {
+    "type": "theme",
+    "icon": "",
+    "extends": {},
+    "previews": []
+  }
+}

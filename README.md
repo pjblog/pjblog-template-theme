@@ -1,5 +1,7 @@
 `PJBlog`主题制作模板。
 
+> 主题命名必须以`pjblog-theme-`开头
+
 ## Clone repository
 
 ```bash

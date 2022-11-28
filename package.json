@@ -45,9 +45,9 @@
       "server": "./src/entries/server.tsx"
     },
     "skips": [
-      "/demo//@react-refresh",
-      "/demo/@id/vite/modulepreload-polyfill",
-      "/demo/@vite/client"
+      "/@react-refresh",
+      "/@id/vite/modulepreload-polyfill",
+      "/@vite/client"
     ],
     "rewrites": {
       "/index.html": "/"

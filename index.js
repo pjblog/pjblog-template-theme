@@ -18,7 +18,7 @@ module.exports = (state) => {
     req.HTMLStates = state;
     const [matched, stream] = render.default.middleware(req);
     if (!matched) return await next();
-    ctx.type === '.html';
+    ctx.set('Content-Type', 'text/html; charset=utf-8');
     ctx.body = stream;
   }
 }

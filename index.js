@@ -1,12 +1,18 @@
 const path = require('path');
 const clientDictionary = path.resolve(__dirname, 'dist', 'ssr', 'client');
+const manifestFileName = path.resolve(clientDictionary, 'manifest.json');
 const PKG = require('./package.json');
 
 module.exports = (state) => {
   return async (ctx, next) => {
     const { getAssets } = await import('@codixjs/vite');
     const render = await import('./dist/ssr/server/server.mjs?version=' + PKG.version);
-    const assets = await getAssets(render.default.prefix, 'src/entries/client.tsx', clientDictionary);
+    const assets = await getAssets(
+      '/', 
+      'src/entries/client.tsx', 
+      clientDictionary,
+      require(manifestFileName)
+    );
     const req = ctx.req;
     req.HTMLAssets = assets;
     req.HTMLStates = state;

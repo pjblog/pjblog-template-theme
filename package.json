@@ -1,6 +1,6 @@
 {
   "name": "pjblog-theme-demo",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "pjblog-theme-demo:description",
   "main": "index.js",
   "repository": "https://github.com/pjblog/pjblog-template-theme",
@@ -22,8 +22,8 @@
     "@codixjs/codix": "^1.0.14",
     "@codixjs/fetch": "^1.0.0",
     "@codixjs/server": "^1.0.0",
-    "@pjblog/hooks": "^1.1.2",
-    "@codixjs/vite": "^1.0.40",
+    "@codixjs/vite": "^1.0.41",
+    "@pjblog/hooks": "^1.1.4",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

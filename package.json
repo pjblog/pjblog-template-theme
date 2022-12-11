@@ -1,6 +1,6 @@
 {
   "name": "pjblog-theme-demo",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "pjblog-theme-demo:description",
   "main": "index.js",
   "repository": "https://github.com/pjblog/pjblog-template-theme",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-decorators": "^7.18.6",
-    "@codixjs/vite": "^1.0.1",
+    "@codixjs/vite": "^1.0.40",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@typeservice/exception": "^1.0.1",

@@ -1,6 +1,6 @@
 {
   "name": "pjblog-theme-demo",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "pjblog-theme-demo:description",
   "main": "index.js",
   "repository": "https://github.com/pjblog/pjblog-template-theme",
@@ -8,7 +8,7 @@
   "files": [
     "dist/ssr",
     "index.js",
-    "theme.configs.json"
+    "pjblog.configs.json"
   ],
   "scripts": {
     "dev": "npm run dev:ssr",
@@ -22,21 +22,21 @@
     "@codixjs/codix": "^1.0.14",
     "@codixjs/fetch": "^1.0.0",
     "@codixjs/server": "^1.0.0",
-    "@pjblog/hooks": "^1.0.19",
+    "@pjblog/hooks": "^1.1.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@typeservice/exception": "^1.0.1",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-proposal-decorators": "^7.18.6",
     "@codixjs/vite": "^1.0.1",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "@typeservice/exception": "^1.0.1",
     "@vitejs/plugin-react": "^1.3.0",
     "less": "^4.1.3",
     "typescript": "^4.8.4",
-    "vite": "^3.1.8"
+    "vite": "^3.2.5"
   },
   "config": {
     "entries": {
@@ -56,8 +56,13 @@
   "manifest": {},
   "pjblog": {
     "type": "theme",
-    "icon": "",
+    "icon": "https://i0.wp.com/themes.svn.wordpress.org/hello-elementor/2.6.1/screenshot.png?w=572&strip=all",
     "extends": {},
-    "previews": []
+    "previews": [
+      "https://i0.wp.com/themes.svn.wordpress.org/astra/3.9.4/screenshot.jpg?w=572&strip=all",
+      "https://i0.wp.com/themes.svn.wordpress.org/twentyseventeen/3.1/screenshot.png?w=572&strip=all",
+      "https://i0.wp.com/themes.svn.wordpress.org/popularfx/1.2.4/screenshot.jpg?w=572&strip=all"
+    ],
+    "assets": "dist/ssr/client"
   }
 }

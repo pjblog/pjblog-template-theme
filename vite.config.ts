@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 const pkg = require('./package.json');
-
+const port = 8000;
 const themeConfigs = {
   abc: 123456
 }
@@ -58,7 +58,7 @@ export default defineConfig(async () => {
         name: 'theme:configs',
         configureServer(server) {
           server.middlewares.use((req, res, next) => {
-            if (req.url === '/api/theme/configs' && req.method.toLowerCase() === 'get') {
+            if (req.url === '/-/theme/configs' && req.method.toLowerCase() === 'get') {
               res.setHeader('content-type', 'application/json');
               res.end(JSON.stringify({
                 status: 200,
@@ -73,10 +73,14 @@ export default defineConfig(async () => {
     ],
     server: {
       proxy: {
-        "/api": {
+        "/-": {
           changeOrigin: true,
-          target: "http://127.0.0.1:8866",
-        }
+          target: "http://127.0.0.1:" + port,
+        },
+        "/~": {
+          changeOrigin: true,
+          target: "http://127.0.0.1:" + port,
+        },
       }
     }
   }

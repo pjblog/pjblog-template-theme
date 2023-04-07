@@ -21,7 +21,7 @@
     "emitDecoratorMetadata": true,
     "skipDefaultLibCheck": true
   },
-  "include": ["src"],
+  "include": ["."],
   "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
